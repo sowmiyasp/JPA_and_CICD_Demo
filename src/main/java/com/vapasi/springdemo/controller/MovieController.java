@@ -21,6 +21,11 @@ public class MovieController {
         this.movieService = movieService;
     }
 
+    @GetMapping("/message")
+    public String message() {
+        return "<H1>My Springboot App</H1>";
+    }
+
     @GetMapping("/")
     public ResponseEntity<List<MovieDto>> getMovies(){
         List<MovieDto> movies = movieService.getMovies();
